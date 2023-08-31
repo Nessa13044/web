@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NguyenDinhPhong</title>
+  <link rel="stylesheet" href="../css/sale.css">
+  <script src="../js/sale.js"></script>
+  
+</head>
+<body>
+  <div class="productList">
+    <h2>Bán Hàng</h2>
+    <table>
+      <form id="priceFilter">
+        <label for="minPrice">Thấp nhất:</label>
+        <input type="number" id="minPrice" name="minPrice" oninput="filterProducts()">
+                
+        <label for="maxPrice">Cao Nhất:</label>
+        <input type="number" id="maxPrice" name="maxPrice" oninput="filterProducts()">
+        
+        <button type="submit">Lọc</button>
+    </form>
+      <thead>
+        <tr>
+          <th>Tích chọn</th>
+          <th>Hàng hóa</th>
+          <th>Đơn giá</th>
+          <th>Số lượng</th>
+          <th>Thành tiền</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="product">
+          <td><input type="checkbox" onchange="handleCheckboxChange(0)"></td>
+          <td>IPhone 12</td>
+          <td>$800</td>
+          <td><input type="number" class="quantity" min="1" disabled onchange="calculateProductTotal(0)"></td>
+          <td class="total-price"></td>
+        </tr>
+        <tr class="product">
+            <td><input type="checkbox" onchange="handleCheckboxChange(1)"></td>
+            <td>IPhone 12 mini</td>
+            <td>$760</td>
+            <td><input type="number" class="quantity" min="1" disabled onchange="calculateProductTotal(1)"></td>
+            <td class="total-price"></td>
+          </tr>
+          <tr class="product">
+            <td><input type="checkbox" onchange="handleCheckboxChange(2)"></td>
+            <td>IPhone 12 plus</td>
+            <td>$890</td>
+            <td><input type="number" class="quantity" min="1" disabled onchange="calculateProductTotal(2)"></td>
+            <td class="total-price"></td>
+          </tr>
+          <tr class="product">
+            <td><input type="checkbox" onchange="handleCheckboxChange(3)"></td>
+            <td>IPhone 12 pro</td>
+            <td>$910</td>
+            <td><input type="number" class="quantity" min="1" disabled onchange="calculateProductTotal(3)"></td>
+            <td class="total-price"></td>
+          </tr>
+          <tr class="product">
+            <td><input type="checkbox" onchange="handleCheckboxChange(4)"></td>
+            <td>IPhone 12 promax</td>
+            <td>$1050</td>
+            <td><input type="number" class="quantity" min="1" disabled onchange="calculateProductTotal(4)"></td>
+            <td class="total-price"></td>
+          </tr>
+        <!-- Add more products here -->
+      </tbody>
+    </table>
+    <div class="total">
+      <span>Tổng tiền:</span>
+      <span id="total-price">0</span>
+    </div>
+  </div>
+
+  
+</body>
+</html>

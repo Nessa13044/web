@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NguyenDinhPhong</title>
+   <script src="../js/FormCheck.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/formcheck.css">
+    
+<body>
+    <div class="card">
+        <form action="../php/register.php" method="post" onsubmit="return validateForm()">
+        <label for="code">Ma so:</label>
+        <input type="text" id="code" name="code" required>
+        <br>
+        
+        <label for="full-name">Ho ten:</label>
+        <input type="text" id="full-name"name="full_name" required>
+        <br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email"name="email" required>
+        <br>
+        
+        <label for="gender">Gioi tinh:</label>
+        <select id="gender" name="gender" required>
+            <option value="">-- Chon gioi tinh --</option>
+            <option value="male">Nam</option>
+            <option value="female">Nu</option>
+        </select>
+        <br>
+        
+        <label for="hobbies">So thich:</label>
+        <input type="checkbox" id="hobbies1" name="hobbies[]" value="The thao" required>
+        <label for="hobbies1">The thao</label>
+        <input type="checkbox" id="hobbies2" name="hobbies[]" value="Du lich" required>
+        <label for="hobbies2">Du lich</label>
+        <!-- Thêm sở thích khác tại đây -->
+        <br>
+        
+        <label for="nationality">Quoc tich:</label>
+        <input type="radio" id="nationality1" name="nationality" value="Viet Nam" required>
+        <label for="nationality1">Viet Nam</label>
+        <input type="radio" id="nationality2" name="nationality" value="Nuoc khac" required>
+        <label for="nationality2">Nuoc khac</label>
+        <!-- Thêm quốc tịch khác tại đây -->
+        <br>
+        
+        <label for="note">Ghi chu:</label>
+        <textarea id="note" name="note" maxlength="200"></textarea>
+        <br>
+        
+        <input type="submit" value="Gui">
+    
+    </form>
+    </div>
+</body>
+</html>
